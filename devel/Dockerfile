@@ -1,7 +1,9 @@
 FROM perl:5.20
 MAINTAINER Siddhartha Basu <siddhartha-basu@northwestern.edu>
 
-COPY *.rpm /rpms/
+ADD https://northwestern.box.com/shared/static/3n0wdp04075oyrnytznn9mzc3k9o92c1.rpm /rpms/
+ADD https://northwestern.box.com/shared/static/o2gd3o70sik5liw43hiomusmu0262auw.rpm /rpms/
+ADD https://northwestern.box.com/shared/static/nsflzsbm2xmcf46z1ybiustosqkdskbb.rpm /rpms/
 
 RUN apt-get update && \
     apt-get -y install alien libaio1 libdb-dev && \
